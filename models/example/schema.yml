@@ -1,0 +1,245 @@
+
+version: 2
+
+models:
+  - name: staging_three_char
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: uniquecode
+        description: "varchar for this table"
+        tests:
+          - not_null
+      - name: countryname
+        description: "enter the countryname"
+        tests:
+          - not_null
+      
+      - name: code_3
+        description: "only threecharacter are allowed"
+        tests:
+          - not_null
+      - name: effectivedate
+        description: "effectivedate"
+        tests:
+          - not_null
+
+      - name: expireddate
+        description: "expireddate"
+
+      - name: updateddate
+        description: "updateddate"
+        tests:
+          - not_null
+
+      - name: lastrefresh_date
+        description: "lastrefresh_date"
+        tests:
+          - not_null      
+    config:
+      schema: stagingschema
+
+  - name: staging_two_char
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+    config:
+      schema: stagingschema
+
+  - name: pub_threechar
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+    config:
+      schema: publishschema
+
+  - name: pub_twochar
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+    config:
+      schema: publishschema
+
+  - name: job_sql
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          # - unique
+          # - not_null
+    config:
+      schema: dbt_config
+
+  - name: mac_model_staging_threechar
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: uniquecode
+        description: "The  uniquecode for this table"
+        tests:
+          - not_null
+      - name: countryname
+        description: "countryname for this table"
+        tests:
+          - not_null       
+      - name: code_3
+        description: "code_3 for this table"
+        tests:
+          - not_null
+      - name: effectivedate
+        description: "effectivedate for this table"
+        tests:
+          - not_null
+      - name: expireddate
+        description: "expireddate this table"
+        tests:
+      - name: updateddate
+        description: "updateddate for this table"
+        tests:
+          - not_null
+      - name: lastrefresh_date
+        description: " lastrefresh_date for this table"
+        tests:
+          - not_null
+    config:
+      schema: macro_models_staging
+
+  - name: mac_model_staging_twochar
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: uniquecode
+        description: "The  uniquecode for this table"
+        tests:
+          - not_null
+      - name: countryname
+        description: "countryname for this table"
+        tests:
+          - not_null       
+      - name: code_2
+        description: "code_2 for this table"
+        tests:
+          - not_null
+      - name: effectivedate
+        description: "effectivedate for this table"
+        tests:
+          - not_null
+      - name: expireddate
+        description: "expireddate this table"
+        tests:
+      - name: updateddate
+        description: "updateddate for this table"
+        tests:
+          - not_null
+      - name: lastrefresh_date
+        description: " lastrefresh_date for this table"
+        tests:
+          - not_null
+    config:
+      schema: macro_models_staging
+
+  - name: mac_model_pub_threechar
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: uniquecode
+        description: "The  uniquecode for this table"
+        tests:
+          - not_null
+      - name: countryname
+        description: "countryname for this table"
+        tests:
+          - not_null       
+      - name: code_3
+        description: "code_3 for this table"
+        tests:
+          - not_null
+      - name: effectivedate
+        description: "effectivedate for this table"
+        tests:
+          - not_null
+      - name: expireddate
+        description: "expireddate this table"
+        tests:
+      - name: updateddate
+        description: "updateddate for this table"
+        tests:
+          - not_null
+      - name: lastrefresh_date
+        description: " lastrefresh_date for this table"
+        tests:
+          - not_null
+    config:
+      schema: macro_models_publish
+
+  - name: mac_model_pub_twochar
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: uniquecode
+        description: "The  uniquecode for this table"
+        tests:
+          - not_null
+      - name: countryname
+        description: "countryname for this table"
+        tests:
+          - not_null       
+      - name: code_2
+        description: "code_2 for this table"
+        tests:
+          - not_null
+      - name: effectivedate
+        description: "effectivedate for this table"
+        tests:
+          - not_null
+      - name: expireddate
+        description: "expireddate this table"
+        tests:
+      - name: updateddate
+        description: "updateddate for this table"
+        tests:
+          - not_null
+      - name: lastrefresh_date
+        description: " lastrefresh_date for this table"
+        tests:
+          - not_null
+    config:
+      schema: macro_models_publish
+
+
+
+
+
+
